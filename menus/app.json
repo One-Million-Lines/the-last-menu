@@ -1,0 +1,101 @@
+{
+  "title": "App",
+  "columns": 3,
+  "scrollable": true,
+  "theme": "bold",
+  "position": "bottom-right",
+  "items": [
+    {
+      "type": "link",
+      "label": "Dashboard",
+      "icon": "📊",
+      "url": "#dashboard"
+    },
+    {
+      "type": "link",
+      "label": "Messages",
+      "icon": "💬",
+      "url": "#messages"
+    },
+    {
+      "type": "link",
+      "label": "Projects",
+      "icon": "📁",
+      "children": [
+        {
+          "type": "link",
+          "label": "Active",
+          "icon": "🟢",
+          "url": "#active"
+        },
+        {
+          "type": "link",
+          "label": "Archived",
+          "icon": "📂",
+          "url": "#archived"
+        },
+        {
+          "type": "link",
+          "label": "Starred",
+          "icon": "⭐",
+          "url": "#starred"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "label": "Calendar",
+      "icon": "📅",
+      "url": "#calendar"
+    },
+    {
+      "type": "link",
+      "label": "Team",
+      "icon": "👥",
+      "children": [
+        {
+          "type": "link",
+          "label": "Members",
+          "icon": "🧑‍💼",
+          "url": "#members"
+        },
+        {
+          "type": "link",
+          "label": "Invite",
+          "icon": "✉️",
+          "url": "#invite"
+        },
+        {
+          "type": "link",
+          "label": "Roles",
+          "icon": "🔑",
+          "url": "#roles"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "label": "Files",
+      "icon": "🗂",
+      "url": "#files"
+    },
+    {
+      "type": "link",
+      "label": "Analytics",
+      "icon": "📈",
+      "url": "#analytics"
+    },
+    {
+      "type": "link",
+      "label": "Notifications",
+      "icon": "🔔",
+      "url": "#notifications"
+    },
+    {
+      "type": "link",
+      "label": "Settings",
+      "icon": "⚙",
+      "url": "#settings"
+    }
+  ]
+}

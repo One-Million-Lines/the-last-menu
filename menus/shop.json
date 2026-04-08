@@ -1,0 +1,82 @@
+{
+  "title": "Shop",
+  "columns": 2,
+  "scrollable": false,
+  "theme": "minimal",
+  "position": "bottom-right",
+  "items": [
+    {
+      "type": "link",
+      "label": "Home",
+      "icon": "⌂",
+      "url": "#home"
+    },
+    {
+      "type": "link",
+      "label": "Search",
+      "icon": "⌕",
+      "url": "#search"
+    },
+    {
+      "type": "link",
+      "label": "Categories",
+      "icon": "▦",
+      "children": [
+        {
+          "type": "link",
+          "label": "Electronics",
+          "icon": "💻",
+          "url": "#electronics"
+        },
+        {
+          "type": "link",
+          "label": "Clothing",
+          "icon": "👕",
+          "url": "#clothing"
+        },
+        {
+          "type": "link",
+          "label": "Home & Garden",
+          "icon": "🏡",
+          "url": "#home-garden"
+        },
+        {
+          "type": "link",
+          "label": "Sports",
+          "icon": "⚽",
+          "url": "#sports"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "label": "Cart",
+      "icon": "🛒",
+      "url": "#cart"
+    },
+    {
+      "type": "link",
+      "label": "Orders",
+      "icon": "📦",
+      "url": "#orders"
+    },
+    {
+      "type": "link",
+      "label": "Account",
+      "icon": "👤",
+      "url": "#account"
+    },
+    {
+      "type": "link",
+      "label": "Help",
+      "icon": "❓",
+      "url": "#help"
+    },
+    {
+      "type": "link",
+      "label": "Settings",
+      "icon": "⚙",
+      "url": "#settings"
+    }
+  ]
+}
