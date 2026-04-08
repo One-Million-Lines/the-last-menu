@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { downloadJson, downloadBundle } from "@/lib/bundler";
 import { SAMPLE_CONFIGS } from "@/types/menu";
-import { Download, FileJson, Upload } from "lucide-react";
+import { THEME_LIST } from "@/lib/themeSource";
+import { Download, FileJson, Upload, Eye, EyeOff } from "lucide-react";
 import { useRef } from "react";
 
 export function Toolbar() {
@@ -25,6 +26,11 @@ export function Toolbar() {
     e.target.value = "";
   };
 
+  const groups = THEME_LIST.reduce<Record<string, typeof THEME_LIST>>((acc, t) => {
+    (acc[t.group] ??= []).push(t);
+    return acc;
+  }, {});
+
   return (
     <div className="flex flex-wrap items-center gap-2 border-b bg-white px-4 py-2">
       {/* Sample presets */}
@@ -37,18 +43,33 @@ export function Toolbar() {
 
       <Separator orientation="vertical" className="h-6" />
 
-      {/* Theme quick-switch */}
+      {/* Theme dropdown */}
       <span className="text-xs font-medium text-muted-foreground mr-1">Theme:</span>
-      {(["minimal", "glass", "bold"] as const).map((t) => (
-        <Button
-          key={t}
-          variant={config.theme === t ? "default" : "outline"}
-          size="sm"
-          onClick={() => setConfig({ ...config, theme: t })}
-        >
-          {t}
-        </Button>
-      ))}
+      <select
+        value={config.theme}
+        onChange={(e) => setConfig({ ...config, theme: e.target.value })}
+        className="h-8 rounded-md border border-input bg-background px-2 text-sm font-medium focus:outline-none focus:ring-1 focus:ring-ring"
+      >
+        {Object.entries(groups).map(([group, themes]) => (
+          <optgroup key={group} label={group}>
+            {themes.map((t) => (
+              <option key={t.id} value={t.id}>{t.label}</option>
+            ))}
+          </optgroup>
+        ))}
+      </select>
+
+      <Separator orientation="vertical" className="h-6" />
+
+      {/* Icons toggle */}
+      <Button
+        variant={config.showIcons ? "default" : "outline"}
+        size="sm"
+        onClick={() => setConfig({ ...config, showIcons: !config.showIcons })}
+      >
+        {config.showIcons ? <Eye className="mr-1 h-3.5 w-3.5" /> : <EyeOff className="mr-1 h-3.5 w-3.5" />}
+        Icons
+      </Button>
 
       <div className="flex-1" />
 

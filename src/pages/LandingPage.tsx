@@ -5,7 +5,7 @@ import { ArrowRight, Code2, Download, Eye, Palette, Settings2, Smartphone } from
 
 const FEATURES = [
   { icon: Settings2, title: "JSON-Driven", desc: "Menu structure, columns, scrollability — all from a JSON config." },
-  { icon: Palette, title: "3 Themes", desc: "Minimal, Glass, and Bold. Each theme is a single CSS file baked in." },
+  { icon: Palette, title: "Themes", desc: "Minimal, Glass, and Bold. Each theme is a single CSS file baked in." },
   { icon: Smartphone, title: "Mobile-First", desc: "Floating FAB + panel overlay designed for touch devices." },
   { icon: Eye, title: "Live Preview", desc: "Edit JSON and see the menu update in real time on the page." },
   { icon: Download, title: "One-File Export", desc: "Download a single JS file that includes theme CSS + your config." },

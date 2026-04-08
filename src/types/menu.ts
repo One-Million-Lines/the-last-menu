@@ -11,8 +11,9 @@ export interface MenuConfig {
   title: string;
   columns: number;
   scrollable: boolean;
-  theme: "minimal" | "glass" | "bold";
+  theme: string;
   position: "bottom-right" | "bottom-left";
+  showIcons: boolean;
   items: MenuItem[];
 }
 
@@ -22,6 +23,7 @@ export const DEFAULT_MENU_CONFIG: MenuConfig = {
   scrollable: false,
   theme: "minimal",
   position: "bottom-right",
+  showIcons: true,
   items: [
     { type: "link", label: "Home", icon: "🏠", url: "#home" },
     { type: "link", label: "About", icon: "ℹ️", url: "#about" },
@@ -47,6 +49,7 @@ export const SAMPLE_CONFIGS: { label: string; config: MenuConfig }[] = [
       scrollable: false,
       theme: "minimal",
       position: "bottom-right",
+      showIcons: true,
       items: [
         { type: "link", label: "Home", icon: "⌂", url: "#home" },
         { type: "link", label: "Search", icon: "⌕", url: "#search" },
@@ -77,6 +80,7 @@ export const SAMPLE_CONFIGS: { label: string; config: MenuConfig }[] = [
       scrollable: true,
       theme: "bold",
       position: "bottom-right",
+      showIcons: true,
       items: [
         { type: "link", label: "Dashboard", icon: "📊", url: "#dashboard" },
         { type: "link", label: "Messages", icon: "💬", url: "#messages" },
